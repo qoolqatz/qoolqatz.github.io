@@ -1,19 +1,21 @@
-
 // script ทายเลข
-{
-  let lotto_number = prompt("กรอกเลขที่ต้องการ 2 ตัว");
-  let random_number = Math.floor(Math.random() * 100)
+function checkLotto() {
+  let lotto_number = document.getElementById("lotto_number").value;
+  let random_number = Math.floor(Math.random() * 100);
 
-  document.getElementById("lotto").innerHTML = lotto_number;
-  document.getElementById("random").innerHTML = random_number;
+  console.log(lotto_number)
+  console.log(random_number)
 
-  if (lotto_number == random_number){
-    document.getElementById("result").innerHTML = "ยินดูด้วย!!! คุณถูกรางวัล"
+  document.getElementById("lotto").innerText = lotto_number;
+  document.getElementById("random").innerText = random_number;
+
+  if (lotto_number == random_number) {
+    document.getElementById("result").innerHTML = "ยินดีด้วย!!! คุณถูกรางวัล";
+    document.getElementById("result").style.color = "green";
   } else {
-    document.getElementById("result").innerHTML = "เสียใจด้วย!!! คุณไม่ถูกรางวัล"
+    document.getElementById("result").innerHTML = "เสียใจด้วย!!! คุณไม่ถูกรางวัล";
+    document.getElementById("result").style.color = "red";
   }
 }
-// หมด script ทายเลข
-
 
 console.log("By:Parnuphong Sanponmueang");
