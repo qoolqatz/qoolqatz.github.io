@@ -1,5 +1,8 @@
 // script ทายเลข
+let count = 0;
+
 function checkLotto() {
+  count++;
   let lotto_number = document.getElementById("lotto_number").value;
   let random_number = Math.floor(Math.random() * 100);
 
@@ -8,6 +11,7 @@ function checkLotto() {
 
   document.getElementById("lotto").innerText = lotto_number;
   document.getElementById("random").innerText = random_number;
+  document.getElementById("count").innerText = "สุ่มไปแล้ว: " + count + " ครั้ง";
 
   if (lotto_number == random_number) {
     document.getElementById("result").innerHTML = "ยินดีด้วย!!! คุณถูกรางวัล";
