@@ -3,15 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
+    <title>เลขท้าย 2 ตัว</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      button {
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>ทายเลขสนุกๆ</h1>
-    <p>เลขที่คุณระบุ</p>
-    <p id="lotto"></p>
-    <p>เลขที่ถูกรางวัลคือ</p>
-    <p id="random"></p>
-    <h2 id="result"></h2>
+    <div class="container">
+      <h1>ทายเลขสนุกๆ</h1>
+      <h4>ใส่ตัวเลขที่นี่ (ใส่ได้ 2 ตัวเท่านั่น ลุ้นแบบเลขท้าย 2 ตัว)</h4>
+      <input id="lotto_number" type="text" maxlength="2" />
+      <button onclick="checkLotto()">สุ่มรางวัล</button>
+      <p>เลขที่คุณระบุ</p>
+      <p id="lotto"></p>
+      <p>เลขที่ถูกรางวัลคือ</p>
+      <p id="random"></p>
+      <h2 id="result"></h2>
+    </div>
 
     <script src="app.js"></script>
   </body>
