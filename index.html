@@ -25,18 +25,46 @@
       button {
         margin-top: 10px;
       }
+      .note {
+        color: red;
+        margin-top: 10px;
+        font-size: 10px;
+      }
+      .label {
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .result-number {
+        font-size: 20px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .btn:hover {
+        background-color: #ff7f00;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>ทายเลขสนุกๆ</h1>
+      <p id="count">สุ่มไปแล้ว: 0 ครั้ง</p>
       <h4>ใส่ตัวเลขที่นี่ (ใส่ได้ 2 ตัวเท่านั่น ลุ้นแบบเลขท้าย 2 ตัว)</h4>
       <input id="lotto_number" type="text" maxlength="2" />
-      <button onclick="checkLotto()">สุ่มรางวัล</button>
-      <p>เลขที่คุณระบุ</p>
-      <p id="lotto"></p>
-      <p>เลขที่ถูกรางวัลคือ</p>
-      <p id="random"></p>
+      <p class="note">คำเตือน!!! ไม่มีการันตี แล้วแต่ดวง</p>
+      <button class="btn" onclick="checkLotto()">สุ่มรางวัล</button>
+      <p class="label">เลขที่คุณระบุ</p>
+      <p id="lotto" class="result-number"></p>
+      <p class="label">เลขที่ถูกรางวัลคือ</p>
+      <p id="random" class="result-number"></p>
       <h2 id="result"></h2>
     </div>
 
