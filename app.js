@@ -23,6 +23,7 @@ function checkLotto() {
   if (lotto_number == random_number) {
     document.getElementById("result").innerHTML = "ยินดีด้วย!!! คุณถูกรางวัล";
     document.getElementById("result").style.color = "green";
+    alert(`ยินดีด้วย!!! คุณถูกรางวัล\nจำนวนที่คุณสุ่มไปทั้งหมด: ${count} ครั้ง`);
   } else {
     document.getElementById("result").innerHTML = "เสียใจด้วย!!! คุณไม่ถูกรางวัล";
     document.getElementById("result").style.color = "red";
